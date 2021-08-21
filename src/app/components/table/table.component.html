@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col" ng-repeat="header in $ctrl.headers">
+         {{header.name}}
+        </div>
+      </div>
+    <div class="row"  ng-repeat="content in $ctrl.contents">
+      <div class="col">
+       {{content.name}}
+      </div>
+      <div class="col">
+        {{content.age}}
+       </div>
+       <div class="col">
+        {{content.end}}
+       </div>
+       <div class="col">
+        {{content.est}}
+       </div>
+       <div class="col">
+        {{content.boss}}
+       </div>
+    </div>
+  </div>

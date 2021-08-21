@@ -1,8 +1,10 @@
 import { Component } from 'angular-ts-decorators';
-
+let template = require('./dashboard.component.html')
+let style = require('./dashboard.component.scss')
 @Component({
   selector: 'app-dashboard',
-  template: require('./dashboard.component.html')
+  template: template,
+  styles: [style],
 })
 export class DashboardComponent {
    /*@ngInject*/

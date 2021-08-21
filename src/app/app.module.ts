@@ -6,6 +6,8 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import 'bootstrap'
 import '../custom.scss'
+import { AccountPostingComponent } from './pages/account-posting/account-posting.component';
+import { TableComponent } from './components/table/table.component';
 
 
 @NgModule({
@@ -16,8 +18,10 @@ import '../custom.scss'
   declarations: [
     AppComponent,
     DashboardComponent,
+    AccountPostingComponent,
     HeroDetailComponent,
-    NavbarComponent
+    NavbarComponent,
+    TableComponent
   ],
   bootstrap: [ AppComponent ]
 })
