@@ -2,5 +2,37 @@
     <div class="title">
         Consulta de Transações
     </div>
+    <div class= "inputs">
+        <div class="mb-3 row g-2 input">
+            <label for="dataStart" class="col-sm-2 label">Data inicial:</label>
+            <div class="col-sm-2 input-primary">
+                <input type="text" class="form-control" id="dataStart" value="email@example.com">
+            </div>
+            <label for="dataEnd" class="col-sm-2 label">Data final:</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="dataEnd" value="email@example.com">
+            </div>
+        </div>
+        <div class="mb-3 row g-2 input">
+            <label for="totalAverageAmount" class="col-sm-2 label">Valor médio total:</label>
+            <div class="col-sm-2 input-primary">
+                <input type="text" class="form-control" id="totalAverageAmount" value="email@example.com">
+            </div>
+            <label for="totalNetAmount" class="col-sm-2 label">Valor líquido total:</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="totalNetAmount" value="email@example.com">
+            </div>
+        </div>
+        <div class="mb-3 row g-2 input">
+            <label for="totalQuantity" class="col-sm-2 label">Quantidade total:</label>
+            <div class="col-sm-2 input-primary">
+                <input type="text" class="form-control" id="totalQuantity" value="email@example.com">
+            </div>
+            <label for="totalAmount" class="col-sm-2 label">Valor total:</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="totalAmount" value="email@example.com">
+            </div>
+        </div>
+    </div>
     <app-table headers="$ctrl.headers" contents="$ctrl.contents"></app-table>
 </div>
