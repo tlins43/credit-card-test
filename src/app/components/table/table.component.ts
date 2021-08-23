@@ -8,8 +8,11 @@ let style = require('./table.component.scss')
   bindings: { headers: '=', contents: '=' }
  
 })
+
 export class TableComponent {    
    /*@ngInject*/
-   constructor() { }
+   constructor() {}
+
+ 
 
 }

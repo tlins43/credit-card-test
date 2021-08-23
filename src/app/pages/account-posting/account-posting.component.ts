@@ -1,7 +1,8 @@
-import { StateService } from '@uirouter/angularjs';
-import { Component, Input } from 'angular-ts-decorators';
+
+import { Component } from 'angular-ts-decorators';
 import { AccountPosting } from '../../core/models/account-posting.model';
 import { AccountPostingService } from '../../core/services/account-posting.service';
+import { HEADERS } from './consts/headers';
 let template = require('./account-posting.component.html')
 let style = require('./account-posting.component.scss')
 
@@ -11,20 +12,22 @@ let style = require('./account-posting.component.scss')
   styles: [style]
 })
 export class AccountPostingComponent { 
-  accountPosting: AccountPosting[]; 
+  accountPosting: AccountPosting; 
    /*@ngInject*/
-  
+   headers = HEADERS;
    constructor(
     private AccountPostingService: AccountPostingService
     ) { }
 
 
-  ngOnInit(): void {
-    console.log("tetse")
+  ngOnInit(): void {    
     this.getAccountPosting();
+    
   }
 
-  getAccountPosting(): void {
-    this.AccountPostingService.getAccountPosting().then(accountPosting => this.accountPosting = accountPosting);
+
+ getAccountPosting() {
+  this.AccountPostingService.getAccountPosting().then(item => (this.accountPosting = item))
   }
+
 }

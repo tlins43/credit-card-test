@@ -1,4 +1,4 @@
-{{$ctrl.headers}}
+
 
 <div class="account-posting">
     <div class="title">
@@ -8,33 +8,33 @@
         <div class="mb-3 row g-2 input">
             <label for="dataStart" class="col-sm-2 label">Data inicial:</label>
             <div class="col-sm-2 input-primary">
-                <input type="text" class="form-control" id="dataStart" value="email@example.com">
+                <input type="date" class="form-control" id="dataStart" value="{{$ctrl.accountPosting.summary.initialDate}}" readonly>
             </div>
             <label for="dataEnd" class="col-sm-2 label">Data final:</label>
             <div class="col-sm-2">
-                <input type="text" class="form-control" id="dataEnd" value="email@example.com">
+                <input type="date" class="form-control" id="dataEnd" value="{{$ctrl.accountPosting.summary.finalDate}}" readonly>
             </div>
         </div>
         <div class="mb-3 row g-2 input">
             <label for="totalAverageAmount" class="col-sm-2 label">Valor médio total:</label>
             <div class="col-sm-2 input-primary">
-                <input type="text" class="form-control" id="totalAverageAmount" value="email@example.com">
+                <input type="number" class="form-control" id="totalAverageAmount" value="{{$ctrl.accountPosting.summary.totalAverageAmount}}" readonly>
             </div>
             <label for="totalNetAmount" class="col-sm-2 label">Valor líquido total:</label>
             <div class="col-sm-2">
-                <input type="text" class="form-control" id="totalNetAmount" value="email@example.com">
+                <input type="number" class="form-control" id="totalNetAmount" value="{{$ctrl.accountPosting.summary.totalNetAmount}}" readonly>
             </div>
         </div>
         <div class="mb-3 row g-2 input">
             <label for="totalQuantity" class="col-sm-2 label">Quantidade total:</label>
             <div class="col-sm-2 input-primary">
-                <input type="text" class="form-control" id="totalQuantity" value="email@example.com">
+                <input type="number" class="form-control" id="totalQuantity" value="{{$ctrl.accountPosting.summary.totalQuantity}}" readonly>
             </div>
             <label for="totalAmount" class="col-sm-2 label">Valor total:</label>
             <div class="col-sm-2">
-                <input type="text" class="form-control" id="totalAmount" value="email@example.com">
+                <input type="number" class="form-control" id="totalAmount" value="{{$ctrl.accountPosting.summary.totalAmount}}" readonly>
             </div>
         </div>
     </div>
-    <app-table headers="$ctrl.headers" contents="$ctrl.contents"></app-table>
+    <app-table headers="$ctrl.headers" contents="$ctrl.accountPosting.items"></app-table>
 </div>

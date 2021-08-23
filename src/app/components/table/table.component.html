@@ -1,3 +1,4 @@
+
 <div class="container">
   <table class="table table-striped">
     <thead>
@@ -7,12 +8,17 @@
     </thead>
     <tbody>
       <tr  ng-repeat="content in $ctrl.contents">
-        <td>{{content.name}}</td>
-        <td>{{content.age}}</td>
-        <td>{{content.end}}</td>
-        <td>{{content.est}}</td>
-        <td>{{content.boss}}</td>
+        <!-- <td ng-repeat="item in content">{{item}}</td> -->
+        <td>{{content.cnpjRoot}}</td> 
+        <td>{{content.date}}</td>
+        <td>{{content.paymentType}}</td>  
+        <td>{{content.cardBrand}}</td>
+        <td>{{content.grossAmount}}</td>
+        <td>{{content.netAmount}}</td>
+        <td><app-button content="content"></app-button></td>        
+        
       </tr>
     </tbody>
   </table>
 </div>
+
