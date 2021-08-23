@@ -1,18 +1,105 @@
 
 <div class="modal fade" id="{{$ctrl.name}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">  
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title qq   {{$ctrl.content.id}} 
+          <h5 class="modal-title">Detalhes
             </h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">{{$ctrl.content.id}} 
-          ...
+        <div class="modal-body">  
+          <div class= "inputs">
+            <div class="mb-3 row g-2 input">
+              <label for="paymentNode" class="col-sm-2 label">Nó de pagamento:</label>
+              <div class="col-sm-3 input-primary">
+                  <input type="text" class="form-control" id="paymentNode" value="{{$ctrl.content.paymentNode}}" readonly>
+              </div>
+              <label for="cnpjRoot" class="col-sm-2 label">CNPJ:</label>
+              <div class="col-sm-3">
+                  <input type="text" class="form-control" id="cnpjRoot" value="{{$ctrl.content.cnpjRoot}}" readonly>
+              </div>
+          </div>
+          <div class="mb-3 row g-2 input">
+              <label for="date" class="col-sm-2 label">Data:</label>
+              <div class="col-sm-3 input-primary">
+                  <input type="date" class="form-control" id="date" value="{{$ctrl.content.date}}" readonly>
+              </div>
+              <label for="paymentType" class="col-sm-2 label">Tipo de pagamento:</label>
+              <div class="col-sm-3">
+                  <input type="text" class="form-control" id="paymentType" value="{{$ctrl.content.paymentType}}" readonly>
+              </div>
+          </div>
+          <div class="mb-3 row g-2 input">
+              <label for="cardBrand" class="col-sm-2 label">Bandeira:</label>
+              <div class="col-sm-3 input-primary">
+                  <input type="text" class="form-control" id="cardBrand" value="{{$ctrl.content.cardBrand}}" readonly>
+              </div>
+              <label for="authorizationCode" class="col-sm-2 label">Código de autorização:</label>
+              <div class="col-sm-3">
+                  <input type="number" class="form-control" id="authorizationCode" value="{{$ctrl.content.authorizationCode}}" readonly>
+              </div>
+          </div>
+          <div class="mb-3 row g-2 input">
+            <label for="truncatedCardNumber" class="col-sm-2 label">Nº do cartão truncado:</label>
+            <div class="col-sm-3 input-primary">
+                <input type="number" class="form-control" id="truncatedCardNumber" value="{{$ctrl.content.truncatedCardNumber}}" readonly>
+            </div>
+            <label for="grossAmount" class="col-sm-2 label">Valor Bruto:</label>
+            <div class="col-sm-3">
+                <input type="number" class="form-control" id="grossAmount" value="{{$ctrl.content.grossAmount}}" readonly>
+            </div>
+        </div>
+        <div class="mb-3 row g-2 input">
+          <label for="netAmount" class="col-sm-2 label">Valor Liquido:</label>
+          <div class="col-sm-3 input-primary">
+              <input type="number" class="form-control" id="netAmount" value="{{$ctrl.content.netAmount}}" readonly>
+          </div>
+          <label for="terminal" class="col-sm-2 label">Terminal:</label>
+          <div class="col-sm-3">
+              <input type="number" class="form-control" id="terminal" value="{{$ctrl.content.terminal}}" readonly>
+          </div>
+      </div>
+      <div class="mb-3 row g-2 input">
+        <label for="administrationFee" class="col-sm-2 label">Taxa de administração:</label>
+        <div class="col-sm-3 input-primary">
+            <input type="number" class="form-control" id="administrationFee" value="{{$ctrl.content.administrationFee}}" readonly>
+        </div>
+        <label for="channelCode" class="col-sm-2 label">Código do canal:</label>
+        <div class="col-sm-3">
+            <input type="number" class="form-control" id="channelCode" value="{{$ctrl.content.channelCode}}" readonly>
+        </div>
+        <div class="mb-3 row g-2 input">
+          <label for="channel" class="col-sm-2 label">Canal:</label>
+          <div class="col-sm-3 input-primary">
+              <input type="text" class="form-control" id="channel" value="{{$ctrl.content.channel}}" readonly>
+          </div>
+          <label for="withdrawAmount" class="col-sm-2 label">Retirar montante:</label>
+          <div class="col-sm-3">
+              <input type="number" class="form-control" id="withdrawAmount" value="{{$ctrl.content.withdrawAmount}}" readonly>
+          </div>
+          <div class="mb-3 row g-2 input">
+            <label for="minimummdrAmmount" class="col-sm-2 label">Quantidade minima:</label>
+            <div class="col-sm-3 input-primary">
+                <input type="text" class="form-control" id="minimummdrAmmount" value="{{$ctrl.content.minimumMDRAmmount}}" readonly>
+            </div>
+            <label for="mdrTaxAmount" class="col-sm-2 label">Valor do imposto:</label>
+            <div class="col-sm-3">
+                <input type="number" class="form-control" id="mdrTaxAmount" value="{{$ctrl.content.mdrTaxAmount}}" readonly>
+            </div>
+            <div class="mb-3 row g-2 input">
+              <label for="mdrFeeAmount" class="col-sm-2 label">Valor da taxa de mdr:</label>
+              <div class="col-sm-3 input-primary">
+                  <input type="text" class="form-control" id="mdrFeeAmount" value="{{$ctrl.content.mdrFeeAmount}}" readonly>
+              </div>
+              <label for="status" class="col-sm-2 label">Status:</label>
+              <div class="col-sm-3">
+                  <input type="text" class="form-control" id="status" value="{{$ctrl.content.status}}" readonly>
+              </div>
+    </div>
+      </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
